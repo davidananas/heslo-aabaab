@@ -7,11 +7,11 @@ input.onButtonPressed(Button.AB, function () {
     if (heslo == USTUP) {
         basic.showIcon(IconNames.Happy)
         pins.servoWritePin(AnalogPin.P0, 90)
+        control.reset()
     } else {
         basic.showIcon(IconNames.Sad)
+        control.reset()
     }
-    basic.pause(500)
-    basic.clearScreen()
 })
 input.onButtonPressed(Button.B, function () {
     USTUP = "" + USTUP + "B"
@@ -19,6 +19,7 @@ input.onButtonPressed(Button.B, function () {
     basic.clearScreen()
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
+    basic.showString("lock")
     control.reset()
 })
 let USTUP = ""
