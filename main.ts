@@ -15,11 +15,11 @@ input.onButtonPressed(Button.AB, function () {
 })
 input.onButtonPressed(Button.B, function () {
     USTUP = "" + USTUP + "B"
-    basic.showString("A")
+    basic.showString("B")
     basic.clearScreen()
 })
 input.onLogoEvent(TouchButtonEvent.Pressed, function () {
-    pins.servoWritePin(AnalogPin.P0, 0)
+    control.reset()
 })
 let USTUP = ""
 let heslo = ""
