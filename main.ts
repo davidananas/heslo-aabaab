@@ -7,7 +7,6 @@ input.onButtonPressed(Button.AB, function () {
     if (heslo == USTUP) {
         basic.showIcon(IconNames.Happy)
         pins.servoWritePin(AnalogPin.P0, 90)
-        control.reset()
     } else {
         basic.showIcon(IconNames.Sad)
         control.reset()
